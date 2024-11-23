@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adarsha Wagle Music</title>
-    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <style>
         /* Global Styles */
         * {
@@ -31,10 +29,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky; /* Make the navbar sticky */
-            top: 0; /* Stick to the top of the viewport */
-            z-index: 1000; /* Ensure it appears above other content */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         nav h1 {
@@ -56,13 +54,13 @@
             color: #f0f0f0;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s ease;
             display: flex;
             align-items: center;
+            transition: color 0.3s ease;
         }
 
         nav ul li a i {
-            margin-right: 8px; /* Space between icon and text */
+            margin-right: 8px;
         }
 
         nav ul li a:hover {
@@ -72,13 +70,12 @@
         /* Hero Section */
         .hero {
             background: url('your-hero-image.jpg') no-repeat center center/cover;
-            height: 100vh; /* Full viewport height */
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             position: relative;
-            margin-top: 0; /* No margin needed */
         }
 
         .hero::after {
@@ -88,7 +85,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
 
@@ -110,12 +107,10 @@
         .music-player {
             padding: 50px 20px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.6); /* Semi-transparent for contrast */
-            margin: 40px 20px; /* Space between sections */
+            background: rgba(0, 0, 0, 0.7);
+            margin: 40px 20px;
             border-radius: 10px;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-            position: relative; /* Ensure layering context */
-            z-index: 10; /* Place above background */
         }
 
         .track {
@@ -132,18 +127,17 @@
             width: 80%;
             max-width: 500px;
             border-radius: 5px;
-            outline: none; /* Removes the default outline */
-            background-color: #fff; /* White background for audio controls */
-            border: 1px solid #00b4d8; /* Border color */
+            outline: none;
+            background-color: #fff;
+            border: 1px solid #00b4d8;
         }
 
         /* Footer */
         footer {
-            background: rgba(0, 0, 0, 0.8); /* Dark background */
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             text-align: center;
             color: #f0f0f0;
-            margin-top: 20px;
         }
 
         footer a {
@@ -180,7 +174,7 @@
         <h1>Youtik.music</h1>
         <ul>
             <li><a href="#music"><i class="fas fa-music"></i> Music</a></li>
-            <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
             <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
@@ -193,56 +187,51 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <a href="ABOUT.HTML">Learn More About Me</a>
-    </section>
-
     <!-- Music Player Section -->
     <section class="music-player" id="music">
         <div class="track">
-            <h3>Bhagawat <i class="fas fa-play-circle"></i></h3>
-            <audio controls loop>
+            <h3>Bhagawat</h3>
+            <audio controls>
                 <source src="Bagawat.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
         <div class="track">
-            <h3>Cold Hours <i class="fas fa-play-circle"></i></h3>
-            <audio controls loop>
+            <h3>Cold Hours</h3>
+            <audio controls>
                 <source src="Cold Hours.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
         <div class="track">
-            <h3>JHOLA Ma JHAPS <i class="fas fa-play-circle"></i></h3>
-            <audio controls loop>
+            <h3>JHOLA Ma JHAPS</h3>
+            <audio controls>
                 <source src="JHOLA MA JHAPS.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
         <div class="track">
-            <h3>Long time no see <i class="fas fa-play-circle"></i></h3>
-            <audio controls loop>
+            <h3>Long Time No See</h3>
+            <audio controls>
                 <source src="Long time no see.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
         <div class="track">
-            <h3>REGRETS <i class="fas fa-play-circle"></i></h3>
-            <audio controls loop>
+            <h3>REGRETS</h3>
+            <audio controls>
                 <source src="REGRETS.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
         <div class="track">
-            <h3>Funk Song by Talwinder <i class="fas fa-play-circle"></i></h3>
-            <audio controls loop>
+            <h3>Funk Song by Talwinder</h3>
+            <audio controls>
                 <source src="Funk Song.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
@@ -250,7 +239,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="contact" id="contact">
+    <footer id="contact">
         <p>Contact me at: <a href="mailto:wagleadarsha12@gmail.com">wagleadarsha12@gmail.com</a></p>
     </footer>
 
