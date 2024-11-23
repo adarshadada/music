@@ -57,6 +57,12 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a i {
+            margin-right: 8px; /* Space between icon and text */
         }
 
         nav ul li a:hover {
@@ -173,9 +179,9 @@
     <nav>
         <h1>Youtik.music</h1>
         <ul>
-            <li><a href="#music">Music</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#music"><i class="fas fa-music"></i> Music</a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
 
