@@ -150,6 +150,21 @@
             text-decoration: underline;
         }
 
+        /* Spotify Login Button */
+        #login-btn {
+            background-color: #1DB954;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        #login-btn:hover {
+            background-color: #1ed760;
+        }
+
         /* Responsive Styles */
         @media (max-width: 768px) {
             .hero h1 {
@@ -177,6 +192,7 @@
             <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
             <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
+        <button id="login-btn">Login with Spotify</button>
     </nav>
 
     <!-- Hero Section -->
@@ -243,6 +259,42 @@
         <p>Contact me at: <a href="mailto:wagleadarsha12@gmail.com">wagleadarsha12@gmail.com</a></p>
     </footer>
 
+    <!-- Spotify API and Player -->
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script>
+        const CLIENT_ID = 'your-client-id'; // Replace with your Spotify Client ID
+        const REDIRECT_URI = 'https://yourwebsite.com/callback'; // Replace with your Redirect URI
+
+        const AUTH_URL = `https://accounts.spotify.com/authorize?response_type=token&client_id=${CLIENT_ID}&scope=user-library-read%20playlist-read-private%20streaming&redirect_uri=${REDIRECT_URI}`;
+
+        // Handle login button click
+        document.getElementById('login-btn').addEventListener('click', () => {
+            window.location = AUTH_URL;
+        });
+
+        // Retrieve the access token from the URL
+        function getAccessTokenFromUrl() {
+            const hash = window.location.hash.substring(1);
+            const params = new URLSearchParams(hash);
+            return params.get('access_token');
+        }
+
+        const accessToken = getAccessTokenFromUrl();
+        if (accessToken) {
+            // Use Spotify Web Playback SDK to initialize the player
+            const player = new Spotify.Player({
+                name: 'Youtik Music Player',
+                getOAuthToken: cb => { cb(accessToken); },
+                volume: 0.5
+            });
+
+            player.connect().then(success => {
+                if (success) {
+                    console.log('Spotify player connected');
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
